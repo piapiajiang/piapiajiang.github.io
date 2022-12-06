@@ -13,9 +13,38 @@ menu:
   归档:
     url: /archives
     icon: fas fa-archive
+  行业动态:
+    url: /Medical-News
+    icon: fas fa-newspaper
+  政策:
+    url: /policy
+    icon: fas fa-layer-group
+  放松:
+    url: /relax
+    icon: fas fa-mug-hot
+    children:
+      - name: 音乐
+        url: /music
+        icon: fas fa-music
+      - name: 视频
+        url: /movies
+        icon: fas fa-film
+      - name: 书籍
+        url: /books
+        icon: fas fa-book
+      - name: 图片
+        url: /galleries
+        icon: fas fa-image
+      - name: 游戏
+        url: /games
+        icon: fas fa-gamepad
+        
+  建站历程:
+    url: /websitebuilding
+    icon: fas fa-marker
   关于:
     url: /about
-    icon: fas fa-user-circle-o
+    icon: fas fa-user-circle
   友情链接:
     url: /friends
     icon: fas fa-address-book
@@ -40,9 +69,9 @@ menu:
 # 站点运行开始时间.
 time:
   enable: true
-  year: 2018 # 年份
-  month: 09 # 月份
-  date: 20 # 日期
+  year: 2012 # 年份
+  month: 11 # 月份
+  date: 19 # 日期
   hour: 00 # 小时
   minute: 00 # 分钟
   second: 00 # 秒
@@ -63,8 +92,8 @@ cover:
 dream:
   enable: true
   showTitle: true
-  title: 我的梦想
-  text: 不是每个人都应该像我这样去建造一座水晶大教堂，但是每个人都应该拥有自己的梦想，设计自己的梦想，追求自己的梦想，实现自己的梦想。梦想是生命的灵魂，是心灵的灯塔，是引导人走向成功的信仰。有了崇高的梦想，只要矢志不渝地追求，梦想就会成为现实，奋斗就会变成壮举，生命就会创造奇迹。——罗伯·舒乐
+  title: 青青子衿
+  text: 于千万人之中遇见你所要遇见的人，于千万年之中，时间的无涯的荒野里，没有早一步，也没有晚一步，刚巧遇上了，那也没有别的话可说，唯有轻轻地问一声：噢，你也在这里。——张爱玲
 
 # Whether to display the musics.
 # 是否在首页显示音乐.
@@ -72,24 +101,24 @@ music:
   enable: true
   title: #非吸底模式有效
     enable: true
-    show: 听听音乐
+    show: 靡靡之音
   autoHide: true    # hide automaticaly
-  server: netease   #require	music platform: netease, tencent, kugou, xiami, baidu
+  server: tencent   #require	music platform: netease, tencent, kugou, xiami, baidu
   type: playlist    #require song, playlist, album, search, artist
-  id: 503838841     #require	song id / playlist id / album id / search keyword
-  fixed: true       # 开启吸底模式
-  autoplay: false   # 是否自动播放
+  id: 7660234225     #require	song id / playlist id / album id / search keyword
+  fixed: false       # 开启吸底模式
+  autoplay: true   # 是否自动播放
   theme: '#42b983'
   loop: 'all'       # 音频循环播放, 可选值: 'all', 'one', 'none'
   order: 'random'   # 音频循环顺序, 可选值: 'list', 'random'
   preload: 'auto'   # 预加载，可选值: 'none', 'metadata', 'auto'
-  volume: 0.7       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
+  volume: 0.3       # 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
   listFolded: true  # 列表默认折叠
 
 # Whether to display the videos.
 # 是否在首页显示视频.
 video:
-  enable: true
+  enable: false
   showTitle: true
   title: 精彩视频
   url: /medias/videos/demo.mp4 # 必填
@@ -120,17 +149,17 @@ logo: /medias/logo.png
 # 首页 banner 中的第二个按钮的配置，包括按钮的显示名称、font awesome图标和按钮的超链接.
 indexbtn:
   enable: true
-  name: 下载主题
-  icon: fab fa-cloud-download
-  url: https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master
+  name: 我的导航
+  icon: fas fa-globe
+  url: /bookmark
 
 # The configurations of the second line of home banner
 # icon/button will not show up if you leave the corresponding socialLink empty
 # 首页 banner 中的第二行个人信息配置，留空即不启用
 socialLink:
-  github:  https://github.com/blinkfox
-  email: 1181062873@qq.com
-  qq: 1181062873
+  github:  https://github.com/jupeiqi
+  email: xiaojupeiqi@foxmail.com
+  qq: 1575566899
   rss: true # true、false
 
 # Whether to activate the Post TOC, and Configure which title types are supported by TOC support.
@@ -154,8 +183,8 @@ code:
 reward:
   enable: true
   title: 你的赏识是我前进的动力
-  wechat: /medias/reward/wechat.png
-  alipay: /medias/reward/alipay.jpg
+  wechat: /medias/reward/wechat.gif
+  alipay: /medias/reward/alipay.gif
 
 # Whether to activate the copyright information of the blog and author when copying the post content.
 # minCharNumber: Approve copyright information by copying at least how many characters.
@@ -171,7 +200,7 @@ copyright:
 # 是否激活mathjax数学公式，这是全局配置，但文章仍然不会都开启mathjax渲染，
 # 考虑到mathjax加载比较耗时，你还需要在需要渲染的文章的Front-matter中再加上`mathjax: true`才行.
 mathjax:
-  enable: false
+  enable: true
   cdn: https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 # Post word count, reading duration, site total word count.
@@ -195,15 +224,15 @@ clicklove:
 # profile in about page, including avatars, career, and personal introductions.
 # 在”关于”页面中配置个人信息，包括头像、职业和个人介绍.
 profile:
-  avatar: /medias/avatar.jpg
-  career: 软件工程师
-  introduction: 现实的抽象是语言，语言的抽象是程序，程序的抽象是数理逻辑，数理逻辑的抽象是超越认知的真理。
+  avatar: /medias/avatar.png
+  career: 青囊卖卜
+  introduction: 有时做做CPR，常常去抬无法行动的病人，总是心理忽悠我的衣食父母。
 
 # config my projects informations in about page.
 # If you don't want to display this `My Projects` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的项目"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myProjects:
-  enable: true
+  enable: false
   data:
     hexo-theme-matery:
       icon: fas fa-rocket
@@ -240,7 +269,7 @@ myProjects:
 # If you don't want to display this `My Skills` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的技能"信息，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 mySkills:
-  enable: true
+  enable: false
   data:
     Java:
       background: 'linear-gradient(to right, #FF0066 0%, #FF00CC 100%)'
@@ -265,11 +294,77 @@ mySkills:
 # If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的相册"图片，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myGallery:
-  enable: true
+  enable: false
   data:
     - /medias/featureimages/0.jpg
     - /medias/featureimages/1.jpg
     - /medias/featureimages/2.jpg
+    - /medias/featureimages/3.jpg
+    - /medias/featureimages/4.jpg
+    - /medias/featureimages/5.jpg
+    - /medias/featureimages/6.jpg
+    - /medias/featureimages/7.jpg
+    - /medias/featureimages/8.jpg
+    - /medias/featureimages/9.jpg
+    - /medias/featureimages/10.jpg
+    - /medias/featureimages/11.jpg
+    - /medias/featureimages/12.jpg
+    - /medias/featureimages/13.jpg
+    - /medias/featureimages/14.jpg
+    - /medias/featureimages/15.jpg
+    - /medias/featureimages/16.jpg
+    - /medias/featureimages/17.jpg
+    - /medias/featureimages/18.jpg
+    - /medias/featureimages/19.jpg
+    - /medias/featureimages/20.jpg
+    - /medias/featureimages/21.jpg
+    - /medias/featureimages/22.jpg
+    - /medias/featureimages/23.jpg
+    - /medias/featureimages/24.jpg
+    - /medias/featureimages/25.jpg
+    - /medias/featureimages/26.jpg
+    - /medias/featureimages/27.jpg
+    - /medias/featureimages/28.jpg
+    - /medias/featureimages/29.jpg
+    - /medias/featureimages/30.jpg
+    - /medias/featureimages/31.jpg
+    - /medias/featureimages/32.jpg
+    - /medias/featureimages/33.jpg
+    - /medias/featureimages/34.jpg
+    - /medias/featureimages/35.jpg
+    - /medias/featureimages/36.jpg
+    - /medias/featureimages/37.jpg
+    - /medias/featureimages/38.jpg
+    - /medias/featureimages/39.jpg
+    - /medias/featureimages/40.jpg
+    - /medias/featureimages/41.jpg
+    - /medias/featureimages/42.jpg
+    - /medias/featureimages/43.jpg
+    - /medias/featureimages/44.jpg
+    - /medias/featureimages/45.jpg
+    - /medias/featureimages/46.jpg
+    - /medias/featureimages/47.jpg
+    - /medias/featureimages/48.jpg
+    - /medias/featureimages/49.jpg
+    - /medias/featureimages/50.jpg
+    - /medias/featureimages/51.jpg
+    - /medias/featureimages/52.jpg
+    - /medias/featureimages/53.jpg
+    - /medias/featureimages/54.jpg
+    - /medias/featureimages/55.jpg
+    - /medias/featureimages/56.jpg
+    - /medias/featureimages/57.jpg
+    - /medias/featureimages/58.jpg
+    - /medias/featureimages/59.jpg
+    - /medias/featureimages/60.jpg
+    - /medias/featureimages/61.jpg
+    - /medias/featureimages/62.jpg
+    - /medias/featureimages/63.jpg
+    - /medias/featureimages/64.jpg
+    - /medias/featureimages/65.jpg
+
+
+
 
 # Whether to display post-calender in the `archive` page
 # 设置在归档页面中是否显示'文章日历'控件
@@ -313,16 +408,17 @@ livere:
 # To use it, activate the configuration item and set appId and appKey.
 # Valine 评论模块的配置，默认为不激活，如要使用，就请激活该配置项，并设置 appId 和 appKey.
 valine:
-  enable: false
-  appId:
-  appKey:
-  notify: false
-  verify: false
-  visitor: true
-  avatar: 'mm' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
-  pageSize: 10
-  placeholder: 'just go go' # Comment Box placeholder
-  background: /medias/comment_bg.png
+  enable: true # 是否启用Valine评论系统
+  appId: hvD606w9QNMznsP3A4MncHCi-gzGzoHsz
+  appKey: cwyHewGghq2lyaGFGA0MXsHG
+  notify: false # 是否接受邮件通知
+  verify: false # 是否开启验证码
+  visitor: true # 是否启用文章阅读统计
+  avatar: 'mm' # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide 头像展示方式
+  pageSize: 10 # 每页评论数量
+  placeholder: 'just go go' # Comment Box placeholder 默认填充文字
+  background: /medias/comment_bg.png # 背景图片
+  recordIP: true # 是否记录评论者IP
 
 # The configuration of the MiniValine comment module is not activated by default.
 # To use it, activate the configuration item and set appId and appKey.
@@ -330,8 +426,8 @@ valine:
 # See: https://github.com/MiniValine/MiniValine
 minivaline:
   enable: false
-  appId: zhM0AOiqle17oPoE84CoYw1e-gzGzoHsz # Your leancloud application appid
-  appKey: itmzT1JbXfAjVwMqDhGPzU45 # Your leancloud application appkey
+  appId: hvD606w9QNMznsP3A4MncHCi-gzGzoHsz # Your leancloud application appid
+  appKey: cwyHewGghq2lyaGFGA0MXsHG # Your leancloud application appkey
   mode: DesertsP # DesertsP or xCss
   placeholder: Write a Comment # Comment box placeholder
   math: true # Support MathJax.
@@ -376,7 +472,7 @@ changyan:
 # Whether to display fork me on github icon and link, default true, You can change it to your repo address
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
-  enable: true
+  enable: false
   url: https://github.com/blinkfox/hexo-theme-matery
   title: Fork Me
 
@@ -387,7 +483,7 @@ githubLink:
 # 阅读文章的密码验证功能，如要使用此功能请激活该配置项，并在对应文章的Front-matter中写上'password'的键和加密后的密文即可.
 # 请注意：为了保证密码原文不会被泄露到网页中，文章的密码必须是通过'SHA256'加密的，这样就不会被破解.
 verifyPassword:
-  enable: false
+  enable: true
   promptMessage: 请输入访问本文章的密码
   errorMessage: 密码错误，将返回主页！
 
@@ -484,6 +580,50 @@ featureImages:
 - /medias/featureimages/21.jpg
 - /medias/featureimages/22.jpg
 - /medias/featureimages/23.jpg
+- /medias/featureimages/24.jpg
+- /medias/featureimages/25.jpg
+- /medias/featureimages/26.jpg
+- /medias/featureimages/27.jpg
+- /medias/featureimages/28.jpg
+- /medias/featureimages/29.jpg
+- /medias/featureimages/30.jpg
+- /medias/featureimages/31.jpg
+- /medias/featureimages/32.jpg
+- /medias/featureimages/33.jpg
+- /medias/featureimages/34.jpg
+- /medias/featureimages/35.jpg
+- /medias/featureimages/36.jpg
+- /medias/featureimages/37.jpg
+- /medias/featureimages/38.jpg
+- /medias/featureimages/39.jpg
+- /medias/featureimages/40.jpg
+- /medias/featureimages/41.jpg
+- /medias/featureimages/42.jpg
+- /medias/featureimages/43.jpg
+- /medias/featureimages/44.jpg
+- /medias/featureimages/45.jpg
+- /medias/featureimages/46.jpg
+- /medias/featureimages/47.jpg
+- /medias/featureimages/48.jpg
+- /medias/featureimages/49.jpg
+- /medias/featureimages/50.jpg
+- /medias/featureimages/51.jpg
+- /medias/featureimages/52.jpg
+- /medias/featureimages/53.jpg
+- /medias/featureimages/54.jpg
+- /medias/featureimages/55.jpg
+- /medias/featureimages/56.jpg
+- /medias/featureimages/57.jpg
+- /medias/featureimages/58.jpg
+- /medias/featureimages/59.jpg
+- /medias/featureimages/60.jpg
+- /medias/featureimages/61.jpg
+- /medias/featureimages/62.jpg
+- /medias/featureimages/63.jpg
+- /medias/featureimages/64.jpg
+- /medias/featureimages/65.jpg
+
+
 
 # default configs that the default policy for every articles/posts
 # default 配置文章的默认转载规则
@@ -542,7 +682,7 @@ ribbon:
 
 # 背景动态彩带.
 ribbon_dynamic:
-  enable: false
+  enable: true
 
 # sharejs文章分享模块.
 # 支持顺序，可选项目为twitter, facebook, google, qq, qzone, wechat, weibo, douban, linkedin.
@@ -564,8 +704,10 @@ subtitle:
   startDelay: 300 # 开始延迟
   typeSpeed: 100 # 打字速度
   backSpeed: 50 # 删除速度
-  sub1: 从来没有真正的绝境, 只有心灵的迷途
-  sub2: Never really desperate, only the lost of the soul
+  sub1: 我明白你会来, 所以我等。
+  sub2: Don't try to see into my heart, You sun of the beach!
+#  sub3: 昔我往矣, 杨柳依依。今我来思, 雨雪霏霏。行道迟迟, 载渴载饥。我心伤悲, 莫知我哀!
+
 
 # 手机二级菜单.
 navMenu:

@@ -1,3 +1,4 @@
+<!-- post文章和右侧toc模块 -->
 <link rel="stylesheet" href="<%- theme.jsDelivr.url %><%- url_for(theme.libs.css.tocbot) %>">
 <style>
     #articleContent h1::before,
@@ -91,9 +92,13 @@
     }
 </style>
 <div class="row">
+
+    <!-- 文章内容详情 -->
     <div id="main-content" class="col s12 m12 l9">
         <%- partial('_partial/post-detail.ejs') %>
     </div>
+
+    <!-- 文章右侧目录 -->
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
             <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;<%- __('toc') %></div>

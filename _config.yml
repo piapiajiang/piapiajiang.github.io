@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 闪烁之狐
-subtitle: 闪烁之狐
-description: 从来没有真正的绝境，只有心灵的迷途
-keywords: 闪烁之狐, Blinkfox
-author: blinkfox
+title: Peiqi Blog
+subtitle: 青囊卖卜
+description: 若无闲事挂心头, 便是人间好时节
+keywords: 佩奇的博客, 青囊卖卜,Peiqi Blog
+author: jupeiqi
 language: zh-CN
 timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
-url: https://blinkfox.github.io/
+url: https://jupeiqi.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -29,10 +29,10 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: 
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :year-:month-:day-:title.md # File name of new posts 与Jekyll兼容，可以直接将Jeykyll博客复制进_post文件夹下
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
@@ -41,7 +41,8 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true # 在控制台用 hexo new post title 创建博客时，会在_post文件夹中生成一个与博客对应的专门存放数据的文件夹，方便管理
+
 relative_link: false
 future: true
 highlight:
@@ -51,7 +52,7 @@ highlight:
   tab_replace: ''
   wrap: true
   hljs: false
-prismjs:
+prismjs: # 代码高亮
   enable: true
   preprocess: true
   line_number: true
@@ -104,13 +105,18 @@ theme: hexo-theme-matery
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
-  repo: https://github.com/blinkfox/blinkfox.github.io.git
+  repo: 
+   github: https://github.com/jupeiqi/jupeiqi.github.io.git
+  #  gitee: https://gitee.com/jupeiqi/jupeiqi.gitee.io.git
+  #  coding: https://e.coding.net/jupeiqi/jupeiqi/jupeiqi.git
+  branch: master
+
 
 search:
   path: search.xml
   field: post
 
-permalink_pinyin:
+permalink_pinyin: # 使在生成文章时生成中文拼音的永久链接
   enable: true
   separator: '-' # default: '-'
 
@@ -123,3 +129,36 @@ feed:
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
+
+githubEmojis: # 对应的markdown emoji语法（::,例如：:smile:）转变成会跳跃的emoji表情
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+
+
+# hexo-douban
+douban:
+  id: 162448367 # 自己的豆瓣id号
+  book:
+    path: books/index.html
+    title: '那些年，我翻阅过的书'
+    quote: '思想和身体，总有一个在路上'
+  movie:
+    path: movies/index.html
+    title: '那些年，我追过的电影'
+    quote: '过去、现在、和未来'
+  game:
+    path: games/index.html
+    title: '那些年，我玩过的游戏'
+    quote: '还记得你曾经的游戏角色吗'
+  timeout: 10000 
+
+# offline config passed to sw-precache.
+service_worker:
+  maximumFileSizeToCacheInBytes: 5242880
+  staticFileGlobs:
+  - public/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,woff2}
+  stripPrefix: public
+  verbose: false

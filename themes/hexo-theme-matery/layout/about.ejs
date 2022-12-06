@@ -1,3 +1,8 @@
+<!-- 背景图片和蒙版高度
+vw： 视窗宽度的百分比（1vw 代表视窗的宽度为 1%）
+vh： 视窗高度的百分比（ 1vh 代表视窗的高度为 1%）
+vmin：当前 vw 和 vh 中较小的一个值
+vmax：当前 vw 和 vh 中较大的一个值 -->
 <style type="text/css">
     /* don't remove. */
     .about-cover {
@@ -5,6 +10,7 @@
     }
 </style>
 
+<!-- 头部背景图片和蒙版 -->
 <%- partial('_partial/bg-cover') %>
 
 <main class="content">
@@ -13,15 +19,21 @@
         <div class="card">
             <div class="card-content">
                 <div class="row">
+                    <!-- 文章、标签链接 -->
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         <%- partial('_partial/post-statis') %>
                     </div>
+
+                    <!-- 头像、作者、标题、职业、社交帐号 -->
                     <div class="col s12 m12 l4">
                         <div class="profile center-align">
+
+                            <!-- 头像，正在使用的是完全透明的图片， -->
                             <div class="avatar">
                                 <img src="<%- theme.jsDelivr.url %><%- url_for(theme.profile.avatar) %>" alt="<%- config.author %>"
                                      class="circle responsive-img avatar-img">
                             </div>
+                            
                             <div class="author">
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     <%- partial('_partial/post-statis') %>
@@ -34,30 +46,62 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- 社交账号，个人github、qq、邮箱、rss -->
                     <div class="col l4 hide-on-med-and-down" data-aos="zoom-in-left">
                         <div class="social-link">
                             <%- partial('_partial/social-link') %>
                         </div>
                     </div>
+                    
                 </div>
 
+                <!-- 个人介绍 -->
                 <div class="introduction center-align" data-aos="fade-up"><%= theme.profile.introduction %></div>
 
+                <!-- 博文统计图表 -->
                 <%- partial('_widget/post-charts') %>
 
+                <!-- 我的项目 -->
                 <% if (theme.myProjects && theme.myProjects.enable) { %>
                 <%- partial('_widget/my-projects') %>
                 <% } %>
 
+                <!-- 我的技能 -->
                 <% if (theme.mySkills && theme.mySkills.enable) { %>
                 <%- partial('_widget/my-skills') %>
                 <% } %>
 
+                <div class="card">  
+                    <!-- 评论模块 -->
+                    <% if (theme.gitalk && theme.gitalk.enable) { %>
+                    <%- partial('_partial/gitalk') %>
+                    <% } %>
+        
+                    <% if (theme.gitment.enable) { %>
+                    <%- partial('_partial/gitment') %>
+                    <% } %>
+        
+                    <% if (theme.disqus.enable) { %>
+                    <%- partial('_partial/disqus') %>
+                    <% } %>
+        
+                    <% if (theme.livere && theme.livere.enable) { %>
+                    <%- partial('_partial/livere') %>
+                    <% } %>
+        
+                    <% if (theme.valine && theme.valine.enable) { %>
+                    <%- partial('_partial/valine') %>
+                    <% } %>
+                </div>
+                
+                <!-- 相册 -->
                 <% if (theme.myGallery && theme.myGallery.enable) { %>
                 <%- partial('_widget/my-gallery') %>
                 <% } %>
 
             </div>
         </div>
+
     </div>
 </main>

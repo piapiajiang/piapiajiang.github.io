@@ -1,3 +1,4 @@
+<!-- post博文加密 -->
 <% if (theme.verifyPassword.enable) { %>
 <script src="<%- theme.jsDelivr.url %><%- url_for(theme.libs.js.crypto) %>"></script>
 <script>
@@ -13,13 +14,16 @@
 </script>
 <% } %>
 
+<!-- post中博文的头部背景图片和蒙版 -->
 <%- partial('_partial/post-cover') %>
 
+<!-- 博文置顶 -->
 <%
     var isTocEnable = theme.toc.enable && String(page.toc) !== 'false';
     var containerClass = isTocEnable ? 'post-container' : 'container';
 %>
 
+<!-- 博文置顶 -->
 <main class="<%- containerClass %> content">
 
     <% if (isTocEnable) { %>
@@ -30,6 +34,7 @@
 
 </main>
 
+<!-- 博文公式插件 -->
 <% if (theme.mathjax.enable && page.mathjax) { %>
 <script src="<%- theme.mathjax.cdn %>"></script>
 <script>
