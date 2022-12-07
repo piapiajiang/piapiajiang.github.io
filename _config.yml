@@ -145,8 +145,6 @@ douban:
     path: books/index.html
     title: '那些年，我翻阅过的书'
     quote: '思想和身体，总有一个在路上'
-
-
   movie:
     path: movies/index.html
     title: '那些年，我追过的电影'
