@@ -1,6 +1,70 @@
-<!-- 头部背景图片和蒙版 -->
-<%- partial('_partial/bg-cover') %>
+<div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+        <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+            <div class="brand">
+                <!-- 封面标题 -->
+                <div class="title center-align">
+                    <% if (config.subtitle && config.subtitle.length > 0) { %>
+                    <%= page.title %>
+                    <% } else { %>
+                        subtitle
+                    <% } %>
+                </div>
+
+                <!-- 封面自动输入自动删除循环的描述语句 -->
+                <div class="description center-align">
+                    <% if (theme.subtitle.enable) { %>
+                    <span id="subtitle"></span>
+                    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                    <script>
+                        var typed = new Typed("#subtitle", {
+                            strings: ['<%= theme.subtitle.sub3 %>','<%= theme.subtitle.sub4 %>'],
+                            startDelay: <%= theme.subtitle.startDelay %>,
+                            typeSpeed: <%= theme.subtitle.typeSpeed %>,
+                            loop: <%= theme.subtitle.loop %>,
+                            backSpeed: <%= theme.subtitle.backSpeed %>,
+                            showCursor: <%= theme.subtitle.showCursor %>
+                        });
+                    </script>
+                    <% } else { %>
+                        <%= config.description %>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+<% if (theme.banner.enable) { %>
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "<%- theme.jsDelivr.url %><%- url_for('/medias/banner/') %>" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+<% } else { %>
+<script>
+    $('.bg-cover').css('background-image', 'url(<%- theme.jsDelivr.url %><%- url_for('/medias/banner/0.jpg') %>)');
+</script>
+<% } %>
 
 
+<!-- 博文置顶 -->
+<%
+    var isTocEnable = false;
+    var containerClass = isTocEnable ? 'post-container' : 'container';
+%>
 
-<%- partial('_widget/e-d-poem') %>
+<!-- 博文置顶 -->
+<main class="<%- containerClass %> content">
+
+    <!-- <% if (isTocEnable) { %>
+    <%- partial('_partial/post-detail-toc.ejs') %>
+    <% } else { %>
+    <%- partial('_partial/post-detail.ejs') %>
+    <% } %> -->
+
+</main>
+    
+
+    

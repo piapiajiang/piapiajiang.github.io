@@ -705,7 +705,9 @@ subtitle:
   typeSpeed: 100 # 打字速度
   backSpeed: 50 # 删除速度
   sub1: 我明白你会来, 所以我等。
-  sub2: Don't try to see into my heart, You sun of the beach!
+  sub2: Don't try to see into my heart, You sun of the beach!\
+  sub3: '深夜竹亭雪，孤灯案上书。不遇无为化，谁复得闲居。'
+  sub4: '柳色惊心事，春风厌索居。方知一杯酒，犹胜百家书。'
 #  sub3: 昔我往矣, 杨柳依依。今我来思, 雨雪霏霏。行道迟迟, 载渴载饥。我心伤悲, 莫知我哀!
 
 
