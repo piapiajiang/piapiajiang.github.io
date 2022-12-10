@@ -106,9 +106,9 @@ theme: hexo-theme-matery
 deploy:
   type: git
   repo: 
-   github: https://github.com/jupeiqi/jupeiqi.github.io.git
-  #  gitee: https://gitee.com/jupeiqi/jupeiqi.gitee.io.git
-  #  coding: https://e.coding.net/jupeiqi/jupeiqi/jupeiqi.git
+   github: https://github.com/piapiajiang/piapiajiang.github.io.git
+  #  gitee: https://gitee.com/piapiajiang/piapiajiang.gitee.io.git
+  #  coding: https://e.coding.net/piapiajiang/piapiajiang/piapiajiang.git
   branch: master
 
 
