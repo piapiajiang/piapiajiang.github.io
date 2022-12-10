@@ -13,12 +13,12 @@ menu:
   归档:
     url: /archives
     icon: fas fa-archive
-  行业动态:
-    url: /Medical-News
-    icon: fas fa-newspaper
-  政策:
-    url: /policy
-    icon: fas fa-layer-group
+  # 行业动态:
+  #   url: /Medical-News
+  #   icon: fas fa-newspaper
+  # 政策:
+  #   url: /policy
+  #   icon: fas fa-layer-group
   放松:
     url: /relax
     icon: fas fa-mug-hot
@@ -39,9 +39,9 @@ menu:
         url: /games
         icon: fas fa-gamepad
         
-  建站历程:
-    url: /websitebuilding
-    icon: fas fa-marker
+  # 建站历程:
+  #   url: /websitebuilding
+  #   icon: fas fa-marker
   关于:
     url: /about
     icon: fas fa-user-circle
